@@ -1,0 +1,96 @@
+ [
+      {
+        "id": "1",
+        "segment_name": "Hotels",
+        "estate_title": "Luxury Beachfront Hotel",
+        "description": "Experience unparalleled luxury and breathtaking ocean views at our beachfront hotel. Indulge in world-class amenities and exceptional service. Each room features a private balcony overlooking the pristine beach.",
+        "price": "$500 per night",
+        "status": "rent",
+        "area": "5000 sq ft",
+        "location": "Tropical Paradise Island",
+        "facilities": ["Infinity Pool", "Spa & Wellness Center", "Fine Dining Restaurants", "Beach Access", "Concierge Service"],
+        "image": "hotel1.jpg",
+        "rating": 4.8,
+        "reviews": 120,
+        "contact": {
+          "phone": "123-456-7890",
+          "email": "info@beachfronthotel.com"
+        }
+      },
+      {
+        "id": "2",
+        "segment_name": "Resorts",
+        "estate_title": "Secluded Mountain Resort & Spa",
+        "description": "Escape to our exclusive mountain resort and spa, nestled in the serene wilderness. Unwind in luxury accommodations and rejuvenate in our world-class spa. Each guest enjoys personalized concierge service and access to private hiking trails.",
+        "price": "$1200 per night",
+        "status": "rent",
+        "area": "8000 sq ft",
+        "location": "Majestic Mountain Range",
+        "facilities": ["Private Cabins", "Hiking Trails", "Gourmet Dining", "Spa & Wellness Center", "Outdoor Adventure Guides"],
+        "image": "resort1.jpg",
+        "rating": 4.9,
+        "reviews": 98,
+        "contact": {
+          "phone": "987-654-3210",
+          "email": "reservations@mountainresortspa.com"
+        }
+      },
+      {
+        "id": "3",
+        "segment_name": "Vacation Rentals",
+        "estate_title": "Charming Coastal Cottage",
+        "description": "Experience coastal living at its finest in our charming cottage. Enjoy panoramic ocean views, coastal walks, and a cozy retreat away from the hustle and bustle. The cottage features a fully equipped kitchen and a private terrace.",
+        "price": "$300 per night",
+        "status": "rent",
+        "area": "1500 sq ft",
+        "location": "Seaside Village",
+        "facilities": ["Private Beach Access", "Outdoor Terrace", "Fully Equipped Kitchen", "Scenic Coastal Walks"],
+        "image": "cottage1.jpg",
+        "rating": 4.7,
+        "reviews": 145,
+        "contact": {
+          "phone": "456-789-0123",
+          "email": "reservations@coastalcottage.com"
+        }
+      },
+      {
+        "id": "4",
+        "segment_name": "Lodges",
+        "estate_title": "Rustic Wilderness Lodge",
+        "description": "Immerse yourself in nature at our rustic lodge, surrounded by pristine forests and tranquil lakes. Experience outdoor adventures and cozy evenings by the fireplace. The lodge offers guided nature tours and lakeside dining.",
+        "price": "$250 per night",
+        "status": "rent",
+        "area": "3000 sq ft",
+        "location": "Wilderness National Park",
+        "facilities": ["Guided Nature Tours", "Lakeside Dining", "Outdoor Activities", "Cozy Fireplace Lounge"],
+        "image": "lodge1.jpg",
+        "rating": 4.5,
+        "reviews": 88,
+        "contact": {
+          "phone": "789-012-3456",
+          "email": "info@wildernesslodge.com"
+        }
+      },
+      {
+        "id": "5",
+        "segment_name": "Guesthouses",
+        "estate_title": "Historic Vineyard Guesthouse",
+        "description": "Step back in time at our historic guesthouse nestled in a picturesque vineyard. Experience old-world charm, vineyard tours, and wine tastings in a serene setting. The guesthouse offers vineyard views and a dedicated wine tasting room.",
+        "price": "$180 per night",
+        "status": "rent",
+        "area": "2000 sq ft",
+        "location": "Vineyard Countryside",
+        "facilities": ["Vineyard Views", "Wine Tasting Room", "Garden Breakfasts", "Historic Tours"],
+        "image": "guesthouse1.jpg",
+        "rating": 4.6,
+        "reviews": 102,
+        "contact": {
+          "phone": "012-345-6789",
+          "email": "reservations@vineyardguesthouse.com"
+        }
+      }
+    ]
+
+  
+  
+  
