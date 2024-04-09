@@ -12,7 +12,8 @@ const route = createBrowserRouter([
         children: [
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader: () => fetch('/fake-data.json')
             },
             {
                 path:'/update-profile',

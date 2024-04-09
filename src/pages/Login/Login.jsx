@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { FaChevronRight, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, } = useForm();
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
         const email = data.email;
@@ -14,11 +16,11 @@ const Login = () => {
         // console.log( email, password );
 
         loginUser(email, password)
-        .then( result => {
-            console.log(result.user);
+        .then( () => {
+            navigate('/')
         })
-        .catch( error => {
-            console.error(error);
+        .catch( () => {
+            toast.error("email and password doesn’t match")
         })
 
     }

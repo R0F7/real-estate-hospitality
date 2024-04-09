@@ -3,28 +3,51 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaChevronRight } from "react-icons/fa";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast from 'react-hot-toast';
+import { updateProfile } from "firebase/auth";
+import { auth } from "../../Firebase/firebase.confige";
 
 
 const Register = () => {
     const [toggle, setToggle] = useState(false);
-    const { createUser } = useContext(AuthContext);
-    const { register, handleSubmit, formState: { errors }, } = useForm();
+    const { createUser, logOut } = useContext(AuthContext);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [emailError, setEmailError] = useState('');
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
         const name = data.name;
         const email = data.email;
         const photo = data.photo;
         const password = data.password;
-        console.log(name, email, photo, password);
+        // console.log(name, email, photo, password);
+
+        if (password.length < 6) {
+            toast.error('password should be at least 6 character or longer');
+            return;
+        }else if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+            toast.error('Must have an Uppercase and a Lowercase letter in the password');
+            return;
+        }
+
+        setEmailError('')
 
         createUser(email, password)
-        .then( result => {
-            console.log(result.user);
+        .then( () => {
+            // console.log(result.user);
+
+            updateProfile(auth.currentUser, {
+                displayName: name, photoURL: photo,
+            })
+            toast.success('Registration successful');
+            
+            logOut();
+            navigate('/login');
         })
         .catch( error => {
-            console.error(error);
+            setEmailError(error.message.split('/')[1].replace(').',''))
         })
 
     }
@@ -40,6 +63,7 @@ const Register = () => {
                     <div>
                         <input {...register("email", { required: true })} type="email" name="email" id="email" placeholder="Email" className="border-b-2 w-full outline-0 py-1.5" />
                         {errors.email && <span>This field is required</span>}
+                        <p className="text-red-400">{emailError}</p>
                     </div>
                     <div>
                         <input {...register("photo")} type="text" name="photo" id="photo" placeholder="Photo URl" className="border-b-2 w-full outline-0 py-1.5" />

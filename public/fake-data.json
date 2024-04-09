@@ -9,13 +9,14 @@
         "area": "5000 sq ft",
         "location": "Tropical Paradise Island",
         "facilities": ["Infinity Pool", "Spa & Wellness Center", "Fine Dining Restaurants", "Beach Access", "Concierge Service"],
-        "image": "hotel1.jpg",
+        "image": "https://i.ibb.co/qNyptrD/Luxury-Beachfront-Hotel.jpg",
         "rating": 4.8,
         "reviews": 120,
         "contact": {
           "phone": "123-456-7890",
           "email": "info@beachfronthotel.com"
-        }
+        },
+        "bg":"#0766AD"
       },
       {
         "id": "2",
@@ -27,13 +28,14 @@
         "area": "8000 sq ft",
         "location": "Majestic Mountain Range",
         "facilities": ["Private Cabins", "Hiking Trails", "Gourmet Dining", "Spa & Wellness Center", "Outdoor Adventure Guides"],
-        "image": "resort1.jpg",
+        "image": "https://i.ibb.co/vzVVzZB/Secluded-Mountain-Resort-Spa.webp",
         "rating": 4.9,
         "reviews": 98,
         "contact": {
           "phone": "987-654-3210",
           "email": "reservations@mountainresortspa.com"
-        }
+        },
+        "bg":"#176B87"
       },
       {
         "id": "3",
@@ -45,13 +47,14 @@
         "area": "1500 sq ft",
         "location": "Seaside Village",
         "facilities": ["Private Beach Access", "Outdoor Terrace", "Fully Equipped Kitchen", "Scenic Coastal Walks"],
-        "image": "cottage1.jpg",
+        "image": "https://i.ibb.co/1Qc2BXG/Charming-Coastal-Cottage.jpg",
         "rating": 4.7,
         "reviews": 145,
         "contact": {
           "phone": "456-789-0123",
           "email": "reservations@coastalcottage.com"
-        }
+        },
+        "bg":"#214079"        
       },
       {
         "id": "4",
@@ -63,13 +66,14 @@
         "area": "3000 sq ft",
         "location": "Wilderness National Park",
         "facilities": ["Guided Nature Tours", "Lakeside Dining", "Outdoor Activities", "Cozy Fireplace Lounge"],
-        "image": "lodge1.jpg",
+        "image": "https://i.ibb.co/GvNNSYR/Rustic-Wilderness-Lodge.jpg",
         "rating": 4.5,
         "reviews": 88,
         "contact": {
           "phone": "789-012-3456",
           "email": "info@wildernesslodge.com"
-        }
+        },
+        "bg":"#526D82"
       },
       {
         "id": "5",
@@ -81,13 +85,14 @@
         "area": "2000 sq ft",
         "location": "Vineyard Countryside",
         "facilities": ["Vineyard Views", "Wine Tasting Room", "Garden Breakfasts", "Historic Tours"],
-        "image": "guesthouse1.jpg",
+        "image": "https://i.ibb.co/7jHG0B1/Historic-Vineyard-Guesthouse.jpg",
         "rating": 4.6,
         "reviews": 102,
         "contact": {
           "phone": "012-345-6789",
           "email": "reservations@vineyardguesthouse.com"
-        }
+        },
+        "bg":"#19A7CE"
       }
     ]
 

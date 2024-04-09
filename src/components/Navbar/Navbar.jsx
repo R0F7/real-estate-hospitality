@@ -5,7 +5,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut();
     }
 
@@ -36,7 +36,9 @@ const Navbar = () => {
                 {
                     user ?
                         <div className='flex gap-2 items-center'>
-                            <img className='w-12 h-12 rounded-full' src={user?.photoURL || 'https://i.ibb.co/51kxBQ8/istockphoto-1327592506-612x612.jpg' } alt="" />
+                            <div className='w-12 h-12 rounded-full tooltip tooltip-secondary tooltip-bottom' data-tip={user?.displayName || 'Unknown'}>
+                                <img className='w-full h-full rounded-full' src={user?.photoURL || 'https://i.ibb.co/51kxBQ8/istockphoto-1327592506-612x612.jpg'} alt="" />
+                            </div>
                             <button onClick={handleLogOut} className="btn">Logout</button>
                         </div>
                         :
