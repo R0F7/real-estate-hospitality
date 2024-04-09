@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import EstateDetails from "../pages/EstateDetails/EstateDetails";
 
 const route = createBrowserRouter([
     {
@@ -14,6 +15,11 @@ const route = createBrowserRouter([
                 path:'/',
                 element:<Home></Home>,
                 loader: () => fetch('/fake-data.json')
+            },
+            {
+                path:'/estate/:id',
+                element:<EstateDetails></EstateDetails>,
+                loader: ()=> fetch('/fake-data.json')
             },
             {
                 path:'/update-profile',

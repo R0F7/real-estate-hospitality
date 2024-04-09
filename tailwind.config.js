@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        heading: ' "Playfair Display", serif ',
+        description: '"Inconsolata", monospace'
+      },
+    },
   },
   plugins: [require("daisyui")],
 }
