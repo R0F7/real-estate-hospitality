@@ -4,11 +4,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast';
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
     const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
 
     const onSubmit = (data) => {
         const email = data.email;
@@ -16,33 +19,33 @@ const Login = () => {
         // console.log( email, password );
 
         loginUser(email, password)
-        .then( () => {
-            navigate('/')
-        })
-        .catch( () => {
-            toast.error("email and password doesn’t match")
-        })
+            .then(() => {
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(() => {
+                toast.error("email and password doesn’t match")
+            })
 
     }
 
-    const handleGoogleLogin =()=>{
+    const handleGoogleLogin = () => {
         googleLogin()
-        .then( result => {
-            console.log(result.user);
-        })
-        .catch( error => {
-            console.error(error);
-        })
+            .then(() => {
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
-    const handleGithubLogin =()=>{
+    const handleGithubLogin = () => {
         githubLogin()
-        .then( result => {
-            console.log(result.user);
-        })
-        .catch( error => {
-            console.error(error);
-        })
+            .then(() => {
+                navigate('/');
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
 
     return (

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const EstateCard = ({ data }) => {
-    const { id, segment_name, estate_title, description, price, status, area, location, facilities, image, rating, reviews, contact } = data;
+    const { id, segment_name, estate_title, description, price, status, area, location, image } = data;
 
     return (
         <div className={`bg-[#214079] flex items-center gap-6 justify-between md:py-14 md:px-8 rounded-xl shadow-xl`}>

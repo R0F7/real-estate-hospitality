@@ -5,11 +5,14 @@ import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
+import PrivetRoute from "./PrivetRoute";
+import NotFound from "../pages/NotFound/NotFound";
 
 const route = createBrowserRouter([
     {
         path:'/',
         element:<Layout></Layout>,
+        errorElement:<NotFound></NotFound>,
         children: [
             {
                 path:'/',
@@ -18,8 +21,8 @@ const route = createBrowserRouter([
             },
             {
                 path:'/estate/:id',
-                element:<EstateDetails></EstateDetails>,
-                loader: ()=> fetch('/fake-data.json')
+                loader: ()=> fetch('/fake-data.json'),
+                element:<PrivetRoute><EstateDetails></EstateDetails></PrivetRoute>,
             },
             {
                 path:'/update-profile',

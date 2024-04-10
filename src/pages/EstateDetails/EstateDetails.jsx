@@ -14,7 +14,7 @@ const EstateDetails = () => {
 
     const data = allData.find(data => data.id === id);
 
-    const { segment_name, estate_title, description, price, status, area, location, facilities, image, rating, reviews, contact } = data;
+    const { segment_name, estate_title, description, price, status, area, location, facilities, image, contact } = data;
 
     return (
         <div>
@@ -72,14 +72,30 @@ const EstateDetails = () => {
                         </div>
                     </div>
                     <div className='grid grid-cols-2 gap-y-3 gap-x-8 my-4 w-3/4'>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Price: </span>{price}</p>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Status: </span>{status}</p>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Area: </span>{area}</p>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Location: </span>{location}</p>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Rating: </span>{rating}</p>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Review: </span>{reviews}</p>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Phone: </span>{contact.phone}</p>
-                        <p className='border-b pb-1.5 font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Email: </span>{contact.email}</p>
+                        <div>
+                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Price: </span>{price}</p>
+                            <div className=' h-[1px] bg-[rgba(5,191,219)] mt-1.5 w-[65%]'></div>
+                        </div>
+                        <div>
+                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Status: </span>{status}</p>
+                            <div className=' h-[1px] bg-[#05BFDB] mt-1.5 w-[65%]'></div>
+                        </div>
+                        <div>
+                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Area: </span>{area}</p>
+                            <div className=' h-[2px] bg-[#05BFDB] mt-1.5 w-[80%]'></div>
+                        </div>
+                        <div>
+                            <p className='font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Location: </span>{location}</p>
+                            <div className=' h-[2px] bg-[#05BFDB] mt-1.5 w-[80%]'></div>
+                        </div>
+                        <div>
+                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Phone: </span>{contact.phone}</p>
+                            <div className=' h-[1px] bg-[#05BFDB] mt-1.5 w-[95%]'></div>
+                        </div>
+                        <div>
+                            <p className='font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Email: </span>{contact.email}</p>
+                            <div className=' h-[1px] bg-[#05BFDB] mt-1.5 '></div>
+                        </div>
                     </div>
                     <div>
                         { }
