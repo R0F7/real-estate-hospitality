@@ -23,6 +23,7 @@ const Register = () => {
         const photo = data.photo;
         const password = data.password;
         // console.log(name, email, photo, password);
+        console.log(photo);
 
         if (password.length < 6) {
             toast.error('password should be at least 6 character or longer');

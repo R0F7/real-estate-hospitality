@@ -7,7 +7,7 @@ import loaderSpin from '../../public/loader/Animation - 1712722970500.gif';
 const PrivetRoute = ({ children }) => {
     const { user, loader } = useContext(AuthContext);
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
 
     if(loader){
         return <p className='h-[75vh] flex justify-center items-center'><img src={loaderSpin} alt="" /></p>

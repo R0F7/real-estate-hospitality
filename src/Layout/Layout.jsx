@@ -5,10 +5,10 @@ import { Outlet } from 'react-router-dom'
 const Layout = () => {
     return (
         <div>
-            <div className="container mx-auto mt-10 mb-14">
+            <div className="container mx-auto mt-5 lg:mt-10 mb-14">
                 <Navbar></Navbar>
             </div>
-            <div className="container mx-auto">
+            <div className="container lg:mx-auto">
                 <Outlet></Outlet>
             </div>
             <div>

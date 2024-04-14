@@ -1,11 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { auth } from "../Firebase/firebase.confige";
 
 export const AuthContext = createContext(null)
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
+    const [reload, setReload] = useState(false)
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(true);
 
@@ -37,18 +38,31 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
+    const profileUpdate = (name, photoUrl) => {
+        // setLoader(true);
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photoUrl
+        })
+            .then(() => {
+                setUser(auth.currentUser)
+                // console.log(auth.currentUser);
+            })
+    }
+
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-            // console.log(currentUser);
-            setLoader(false);
+            if (createUser) {
+                setUser(currentUser);
+                // console.log(currentUser);
+                setLoader(false);
+            }
         });
 
         return () => {
             unSubscribe()
         }
 
-    }, [])
+    }, [reload])
 
     const authInfo = {
         createUser,
@@ -58,6 +72,9 @@ const AuthProvider = ({ children }) => {
         user,
         logOut,
         loader,
+        profileUpdate,
+        setUser,
+        setReload,
     }
 
     return (

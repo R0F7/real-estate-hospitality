@@ -31,7 +31,7 @@ const EstateDetails = () => {
             <div className='flex gap-10 my-10'>
                 <div className='w-3/4'>
                     <div className='flex items-center justify-between mb-2'>
-                        <h4 className='text-4xl font-bold font-heading '>{segment_name}</h4>
+                        <h4 className='text-4xl font-bold font-heading '>{segment_name} for {status}</h4>
                         <div className='flex text-2xl gap-4'>
                             <span><FaRegHeart /></span>
                             <span><CiShare2 /></span>

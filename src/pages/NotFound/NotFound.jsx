@@ -1,17 +1,21 @@
 import { Link, useRouteError } from "react-router-dom";
 
 const NotFound = () => {
-    const { status, statusText, data } = useRouteError();
+    const { status } = useRouteError();
 
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen ">
-            <h4 className="text-7xl text-red-500 font-bold">{status}</h4>
-            <p className="text-7xl font-bold">{statusText}</p>
-            <h6 className="text-xl text-center lg:text-5xl font-bold mb-10 mt-5">{data}</h6>
-            <div>
-                <Link to="/" className="bg-[#59C6D2] py-4 px-5 lg:py-5 lg:px-7 text-white Work-Sans text-sm lg:text-lg font-semibold rounded-lg">Back Home</Link>
+        <section className="lg:h-[100vh] flex items-center h-full p-16 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
+            <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+                <div className="max-w-md text-center">
+                    <h2 className="mb-8 font-extrabold text-9xl text-gray-600 dark:text-gray-400">
+                        <span className="sr-only">Error</span>{status}
+                    </h2>
+                    <p className="text-2xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+                    <p className="mt-4 mb-8 text-gray-400 dark:text-gray-600">But dont worry, you can find plenty of other things on our homepage.</p>
+                    <Link to='/' rel="noopener noreferrer" className="px-8 py-3 font-semibold rounded bg-cyan-400 text-gray-900 dark:text-gray-50">Back to homepage</Link>
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

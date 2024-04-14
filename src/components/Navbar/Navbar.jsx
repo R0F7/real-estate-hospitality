@@ -11,11 +11,13 @@ const Navbar = () => {
 
     const NavLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/profile'>Profile</NavLink></li>
         <li><NavLink to='/update-profile'>Update Profile</NavLink></li>
+        <li><NavLink to='/contact'>Contact</NavLink></li>
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 border-b-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

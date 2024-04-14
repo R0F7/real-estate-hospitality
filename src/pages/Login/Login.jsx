@@ -11,7 +11,7 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
 
     const onSubmit = (data) => {
         const email = data.email;
@@ -20,10 +20,11 @@ const Login = () => {
 
         loginUser(email, password)
             .then(() => {
+                toast.success('log in successfully');
                 navigate(location?.state ? location.state : '/')
             })
             .catch(() => {
-                toast.error("email and password doesn’t match")
+                toast.error("Incorrect email or password")
             })
 
     }
@@ -31,6 +32,7 @@ const Login = () => {
     const handleGoogleLogin = () => {
         googleLogin()
             .then(() => {
+                toast.success('log in successfully');
                 navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
@@ -41,7 +43,8 @@ const Login = () => {
     const handleGithubLogin = () => {
         githubLogin()
             .then(() => {
-                navigate('/');
+                toast.success('log in successfully');
+                navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
                 console.error(error);

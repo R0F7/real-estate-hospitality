@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
 import PrivetRoute from "./PrivetRoute";
 import NotFound from "../pages/NotFound/NotFound";
+import Profile from "../pages/Profile/Profile";
 
 const route = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const route = createBrowserRouter([
                 path:'/estate/:id',
                 loader: ()=> fetch('/fake-data.json'),
                 element:<PrivetRoute><EstateDetails></EstateDetails></PrivetRoute>,
+            },
+            {
+                path:'/profile',
+                element:<PrivetRoute><Profile></Profile></PrivetRoute>
             },
             {
                 path:'/update-profile',
