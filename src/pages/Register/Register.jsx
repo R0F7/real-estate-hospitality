@@ -38,7 +38,7 @@ const Register = () => {
         createUser(email, password)
         .then( () => {
             // console.log(result.user);
-
+            
             updateProfile(auth.currentUser, {
                 displayName: name, photoURL: photo,
             })
@@ -54,9 +54,9 @@ const Register = () => {
     }
 
     return (
-        <div className="h-[100vh] flex items-center">
-            <form onSubmit={handleSubmit(onSubmit)} className="border md:w-3/4 lg:w-[30%] mx-auto px-8 pt-24 pb-10 rounded-lg ">
-                <div className="space-y-10">
+        <div className="lg:h-[calc(100vh-386px)] flex items-center">
+            <form onSubmit={handleSubmit(onSubmit)} className="border md:w-3/4 lg:w-[30%] mx-auto px-8 py-12  rounded-lg ">
+                <div className="space-y-6">
                     <div>
                         <input {...register("name", { required: true })} type="text" name="name" id="name" placeholder="Name" className="border-b-2 w-full outline-0 py-1.5" />
                         {errors.name && <span>This field is required</span>}

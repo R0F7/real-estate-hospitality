@@ -8,6 +8,7 @@ import EstateDetails from "../pages/EstateDetails/EstateDetails";
 import PrivetRoute from "./PrivetRoute";
 import NotFound from "../pages/NotFound/NotFound";
 import Profile from "../pages/Profile/Profile";
+import Contact from "../pages/Contact/Contact";
 
 const route = createBrowserRouter([
     {
@@ -31,7 +32,7 @@ const route = createBrowserRouter([
             },
             {
                 path:'/update-profile',
-                element:<UpdateProfile></UpdateProfile>
+                element:<PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
             },
             {
                 path:'/login',
@@ -40,6 +41,10 @@ const route = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/contact',
+                element:<Contact></Contact>
             }
         ]
     }

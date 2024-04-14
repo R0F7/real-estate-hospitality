@@ -52,7 +52,7 @@ const Login = () => {
     }
 
     return (
-        <div className="h-[100vh] flex items-center">
+        <div className="lg:h-[calc(100vh-386px)] flex items-center">
             <form onSubmit={handleSubmit(onSubmit)} className="border md:w-3/4 lg:w-[30%] mx-auto px-8 pt-24 pb-10 rounded-lg ">
                 <div className="space-y-10">
                     <div>
