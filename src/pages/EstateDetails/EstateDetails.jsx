@@ -24,114 +24,114 @@ const EstateDetails = () => {
 
     return (
         <div>
-            <div className='h-[450px] grid grid-cols-5 grid-rows-2 gap-4'>
-                <img className='w-full h-full col-span-3 row-span-2 rounded-xl' src={image} alt="" />
-                <div className='col-span-2 grid grid-cols-2 gap-4 h-full'>
-                    <img className='w-full h-[217px] rounded-xl' src={image} alt="" />
-                    <img className='w-full h-[217px] rounded-xl' src={image} alt="" />
-                    <img className='w-full h-[217px] rounded-xl' src={image} alt="" />
-                    <img className='w-full h-[217px] rounded-xl' src={image} alt="" />
+            <div className='h-[300px] lg:h-[450px] grid grid-cols-5 grid-rows-2 gap-4'>
+                <div className='col-span-5 md:col-span-3 row-span-2'>
+                    <img className='w-full h-full  rounded-xl' src={image} alt="" />
+                </div>
+
+                <div className='col-span-2 hidden md:grid grid-cols-2 gap-4 h-full'>
+                    <img className='w-full h-[143px] lg:h-[217px] rounded-xl' src={image} alt="" />
+                    <img className='w-full h-[143px] lg:h-[217px] rounded-xl' src={image} alt="" />
+                    <img className='w-full h-[143px] lg:h-[217px] rounded-xl' src={image} alt="" />
+                    <img className='w-full h-[143px] lg:h-[217px] rounded-xl' src={image} alt="" />
                 </div>
             </div>
 
-            <div className='flex gap-10 my-10'>
-                <div className='w-3/4'>
+            <div className='flex lg:flex-row flex-col gap-10 my-10'>
+                <div className='lg:w-3/4'>
                     <div className='flex items-center justify-between mb-2'>
-                        <h4 className='text-4xl font-bold font-heading '>{segment_name} for {status}</h4>
-                        <div className='flex text-2xl gap-4'>
+                        <h4 className='text-4xl font-bold font-heading text-cyan-500'>{segment_name} for {status}</h4>
+                        <div className='flex text-3xl gap-4 text-cyan-400'>
                             <span><FaRegHeart /></span>
                             <span><CiShare2 /></span>
                             <span> <BsTicketDetailed /></span>
                         </div>
                     </div>
-                    <div className='flex justify-between my-8'>
-                        <div className='flex gap-6 border p-4 border-cyan-400 rounded-lg'>
-                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
-                                <span className='text-2xl mb-1.5'><FaPrayingHands /></span>
-                                <h4 className='text-sm font-semibold font-description'>Extra Facility</h4>
+                    <div className='flex flex-col md:flex-row justify-between items-center my-4 md:my-8'>
+                        <div className='flex gap-4 md:gap-6 border p-3 md:p-4 border-cyan-400 rounded-lg'>
+                            <div className=' text-cyan-400 border border-cyan-400 rounded-xl w-[70px]  md:w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-lg lg:text-2xl mb-1.5'><FaPrayingHands /></span>
+                                <h4 className='text-sm font-semibold text-center font-description text-cyan-500'>Extra Facility</h4>
                             </div>
-                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
-                                <span className='text-2xl mb-1.5'><TbMassage /></span>
-                                <h4 className='text-sm font-semibold font-description'>Higher Quality </h4>
+                            <div className=' text-cyan-400 border border-cyan-400 rounded-xl w-[70px]  md:w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-lg lg:text-2xl mb-1.5'><TbMassage /></span>
+                                <h4 className='text-sm font-semibold text-center font-description text-cyan-500'>Higher Quality </h4>
                             </div>
-                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
-                                <span className='text-2xl mb-1.5'><FaCar /></span>
-                                <h4 className='text-sm font-semibold font-description'>Have parking</h4>
+                            <div className=' text-cyan-400 border border-cyan-400 rounded-xl w-[70px]  md:w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-lg lg:text-2xl mb-1.5'><FaCar /></span>
+                                <h4 className='text-sm font-semibold text-center font-description text-cyan-500'>Have parking</h4>
                             </div>
-                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
-                                <span className='text-2xl mb-1.5'><MdPets /></span>
-                                <h4 className='text-sm font-semibold font-description'>Pets allow</h4>
+                            <div className=' text-cyan-400 border border-cyan-400 rounded-xl w-[70px]  md:w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-lg lg:text-2xl mb-1.5'><MdPets /></span>
+                                <h4 className='text-sm font-semibold text-center font-description text-cyan-500'>Pets allow</h4>
                             </div>
                         </div>
                         <div>
-                            <div onClick={() => handleBooking(data)}>
+                            <div onClick={() => handleBooking(data)} className='mt-5 md:mt-0'>
                                 <div className='text-cyan-400 border-x border-dashed border-cyan-400 p-1.5 rounded-xl'>
-                                    <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl px-8  py-3 flex flex-col items-center'>
-                                        <span className='text-4xl mb-1.5'><IoBookmarksOutline /></span>
-                                        <h4 className='text-sm font-semibold font-description'>Bookmark</h4>
+                                    <div className='text-xl text-white hover:bg-white hover:text-cyan-400 bg-cyan-400 hover:border hover:border-cyan-400 rounded-xl py-2 px-8 flex gap-2 items-center'>
+                                        <span className='text-xl '><IoBookmarksOutline /></span>
+                                        <h4 className='text-xl font-semibold font-description'>Bookmark</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h4 className='text-3xl font-bold font-heading mb-3'>{estate_title}</h4>
-                        <p className='font-description mb-3'>{description}</p>
+                        <h4 className='text-3xl font-bold font-heading mb-3 text-cyan-500'>{estate_title}</h4>
+                        <p className='font-description mb-3 text-[#808080]'>{description}</p>
                     </div>
                     <div className='mb-3'>
-                        <h4 className='text-2xl font-bold font-heading mb-2'>Facilities:</h4>
+                        <h4 className='text-2xl font-bold font-heading mb-2 text-cyan-500'>Facilities:</h4>
                         <div className='ml-3'>
                             {
                                 facilities.map((facility, idx) => <div className='flex items-center gap-1.5' key={idx}>
-                                    <span className='text-[9px]'><VscSymbolMethod /></span>
-                                    <h4 className='text-lg font-description font-medium'>{facility}</h4>
+                                    <span className='text-[9px] text-cyan-500'><VscSymbolMethod /></span>
+                                    <h4 className='text-lg font-description font-medium text-[#808080]'>{facility}</h4>
                                 </div>)
                             }
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-y-3 gap-x-8 my-4 w-3/4'>
+                    <div className='grid md:grid-cols-2 gap-y-3 gap-x-8 my-4 lg:w-3/4 bg-gray-100 rounded-lg px-6 py-8'>
                         <div>
-                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Price: </span>{price}</p>
+                            <p className=' font-description text-lg font-medium text-[#808080]'><span className='text-xl font-bold font-heading text-cyan-400'>Price: </span>{price}</p>
                             <div className=' h-[1px] bg-[rgba(5,191,219)] mt-1.5 w-[65%]'></div>
                         </div>
                         <div>
-                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Status: </span>{status}</p>
+                            <p className=' font-description text-lg font-medium text-[#808080]'><span className='text-xl font-bold font-heading text-cyan-400'>Status: </span>{status}</p>
                             <div className=' h-[1px] bg-[#05BFDB] mt-1.5 w-[65%]'></div>
                         </div>
                         <div>
-                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Area: </span>{area}</p>
-                            <div className=' h-[2px] bg-[#05BFDB] mt-1.5 w-[80%]'></div>
+                            <p className=' font-description text-lg font-medium text-[#808080]'><span className='text-xl font-bold font-heading text-cyan-400'>Area: </span>{area}</p>
+                            <div className=' h-[1px] bg-[#05BFDB] mt-1.5 w-[80%]'></div>
                         </div>
                         <div>
-                            <p className='font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Location: </span>{location}</p>
-                            <div className=' h-[2px] bg-[#05BFDB] mt-1.5 w-[80%]'></div>
+                            <p className='font-description text-lg font-medium text-[#808080]'><span className='text-xl font-bold font-heading text-cyan-400'>Location: </span>{location}</p>
+                            <div className=' h-[1px] bg-[#05BFDB] mt-1.5 w-[89%]'></div>
                         </div>
                         <div>
-                            <p className=' font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Phone: </span>{contact.phone}</p>
+                            <p className=' font-description text-lg font-medium text-[#808080]'><span className='text-xl font-bold font-heading text-cyan-400'>Phone: </span>{contact.phone}</p>
                             <div className=' h-[1px] bg-[#05BFDB] mt-1.5 w-[95%]'></div>
                         </div>
                         <div>
-                            <p className='font-description text-lg font-medium'><span className='text-xl font-bold font-heading'>Email: </span>{contact.email}</p>
+                            <p className='font-description text-lg font-medium text-[#808080]'><span className='text-xl font-bold font-heading text-cyan-400'>Email: </span>{contact.email}</p>
                             <div className=' h-[1px] bg-[#05BFDB] mt-1.5 '></div>
                         </div>
                     </div>
-                    <div>
-                        { }
-                    </div>
                 </div>
-                <div className='w-1/4'>
+                <div className='md:w-3/4 lg:w-1/4 md:mx-auto'>
                     <form className=' border p-6 rounded-xl'>
-                        <h2 className='text-center text-3xl font-semibold font-description'>Contact Us</h2>
+                        <h2 className='text-center text-3xl font-bold font-description text-cyan-400'>Contact Us</h2>
                         <div>
                             <label htmlFor="name">
-                                <h6 className='font-heading font-semibold'>Name</h6>
-                                <input type="text" id='name' placeholder="Name" className="input input-bordered w-full max-w-xs mt-0.5" />
+                                <h6 className='font-heading font-semibold text-[#808080]'>Name</h6>
+                                <input type="text" id='name' placeholder="Name" className="input input-bordered w-full lg:max-w-xs mt-0.5" />
                             </label>
                         </div>
                         <div className='mt-1'>
                             <label htmlFor="email">
-                                <h6 className='font-heading font-semibold'>Email</h6>
-                                <input type="text" id='email' placeholder="Email" className="input input-bordered w-full max-w-xs mt-0.5" />
+                                <h6 className='font-heading font-semibold text-[#808080]'>Email</h6>
+                                <input type="text" id='email' placeholder="Email" className="input input-bordered w-full lg:max-w-xs mt-0.5" />
                             </label>
                         </div>
                         <div className='mt-3.5'>

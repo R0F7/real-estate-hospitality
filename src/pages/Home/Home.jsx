@@ -7,8 +7,8 @@ const Home = () => {
 
     return (
         <div>
-            <div>
-                <Slider></Slider>
+            <div className="mx-5 lg:mx-0">
+                <Slider allData ={allData} ></Slider>
             </div>
             <div>
                 <Estates allData = {allData}></Estates>

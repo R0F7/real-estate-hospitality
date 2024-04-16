@@ -1,13 +1,8 @@
 import PropTypes from 'prop-types';
-// import { removeLocalStorageData } from '../Utility/Utility';
 
 const BookingTemplate = ({ data, handleRemove }) => {
     const { segment_name, estate_title, status, image } = data;
     console.log(data);
-
-    // const handleRemove =(data)=>{
-    //     removeLocalStorageData(data)
-    // }
 
     return (
         <div>

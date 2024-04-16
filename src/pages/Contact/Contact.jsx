@@ -3,7 +3,7 @@ import MapWithMarker from "../../components/Map/Map";
 const Contact = () => {
     return (
         <div className="lg:h-[calc(100vh-386px)]">
-            <section className="py-6 dark:bg-gray-00 dark:text-gray-900">
+            <section className="dark:bg-gray-00 dark:text-gray-900">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x divide-cyan-400">
                         <div className="py-6 md:py-0 md:px-6 -z-50">
                             <MapWithMarker></MapWithMarker>

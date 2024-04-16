@@ -46,7 +46,7 @@ const UpdateProfile = () => {
 
     return (
         <>
-            <div className="lg:h-[calc(100vh-386px)] mx-4 md:mx-auto -mt-5 lg:-mb-0 mb-10 lg:-mt-0 flex justify-center">
+            <div className="lg:h-[calc(100vh-386px)] mx-4 md:mx-auto mb-10 lg:-mt-0 flex justify-center">
                 <div className=" w-full md:w-[50%] lg:w-[25%] h-[420px] p-6 text-center flex flex-col justify-center bg-gradient-to-b rounded-lg shadow-lg from-[rgba(204,204,204,.5)] to-[rgba(230,230,230,.35)]">
                     <h2 className="font-description font-bold text-2xl mt-6 mb-6 text-cyan-400">Update Profile</h2>
                     <div>

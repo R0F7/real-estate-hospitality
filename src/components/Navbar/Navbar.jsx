@@ -10,11 +10,11 @@ const Navbar = () => {
     }
 
     const NavLinks = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/booking'>Bookmark</NavLink></li>
-        <li><NavLink to='/profile'>Profile</NavLink></li>
-        <li><NavLink to='/update-profile'>Update Profile</NavLink></li>
-        <li><NavLink to='/contact'>Contact</NavLink></li>
+        <li><NavLink to='/' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Home</NavLink></li>
+        <li><NavLink to='/booking' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Bookmark</NavLink></li>
+        <li><NavLink to='/profile' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Profile</NavLink></li>
+        <li><NavLink to='/update-profile' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Update Profile</NavLink></li>
+        <li><NavLink to='/contact' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Contact</NavLink></li>
     </>
 
     return (
@@ -28,7 +28,7 @@ const Navbar = () => {
                         {NavLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Hospitality Haven</a>
+                <a className="text-xl font-bold font-heading">Hospitality <span className='text-cyan-400'>Haven</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
