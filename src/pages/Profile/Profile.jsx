@@ -10,7 +10,7 @@ const Profile = () => {
     // console.log('profile',user);
 
     return (
-        <div className="lg:h-[calc(100vh-386px)] -mt-5 lg:-mb-0 mb-10 lg:-mt-0 flex items-center">
+        <div className="lg:h-[calc(100vh-386px)] -mt-5 lg:-mb-0 mb-10 lg:-mt-0 flex items-center ">
             <div className="flex flex-col lg:flex-row shadow-2xl md:w-1/2 lg:h-[350px] rounded-lg lg:my-10 mx-auto bg-gradient-to-r from-[rgba(204,204,204,.55)] to-[rgba(230,230,230,.25)] ">
                 <div className="p-6 flex flex-col justify-center h-full lg:w-2/5 text-center">
 

@@ -9,6 +9,7 @@ import PrivetRoute from "./PrivetRoute";
 import NotFound from "../pages/NotFound/NotFound";
 import Profile from "../pages/Profile/Profile";
 import Contact from "../pages/Contact/Contact";
+import MyBookmark from "../pages/MyBookmark/MyBookmark";
 
 const route = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const route = createBrowserRouter([
                 path:'/estate/:id',
                 loader: ()=> fetch('/fake-data.json'),
                 element:<PrivetRoute><EstateDetails></EstateDetails></PrivetRoute>,
+            },
+            {
+                path:'/booking',
+                element:<PrivetRoute><MyBookmark></MyBookmark></PrivetRoute>
             },
             {
                 path:'/profile',

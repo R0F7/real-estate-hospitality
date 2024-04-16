@@ -7,6 +7,8 @@ import { FaCar } from "react-icons/fa";
 import { FaPrayingHands } from "react-icons/fa";
 import { TbMassage } from "react-icons/tb";
 import { VscSymbolMethod } from "react-icons/vsc";
+import { IoBookmarksOutline } from "react-icons/io5";
+import { setLocalStorageData } from '../../Utility/Utility';
 
 const EstateDetails = () => {
     const { id } = useParams();
@@ -15,6 +17,10 @@ const EstateDetails = () => {
     const data = allData.find(data => data.id === id);
 
     const { segment_name, estate_title, description, price, status, area, location, facilities, image, contact } = data;
+
+    const handleBooking = (data) => {
+        setLocalStorageData(data);
+    }
 
     return (
         <div>
@@ -38,23 +44,35 @@ const EstateDetails = () => {
                             <span> <BsTicketDetailed /></span>
                         </div>
                     </div>
-                    <div className='flex  justify-between my-8'>
-                        <div className='text-xl border rounded-xl w-48 py-6 flex flex-col items-center'>
-                            <span className='text-4xl mb-1.5'><FaPrayingHands /></span>
-                            <h4 className='text-sm font-semibold font-description'>Extra Facility</h4>
+                    <div className='flex justify-between my-8'>
+                        <div className='flex gap-6 border p-4 border-cyan-400 rounded-lg'>
+                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-2xl mb-1.5'><FaPrayingHands /></span>
+                                <h4 className='text-sm font-semibold font-description'>Extra Facility</h4>
+                            </div>
+                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-2xl mb-1.5'><TbMassage /></span>
+                                <h4 className='text-sm font-semibold font-description'>Higher Quality </h4>
+                            </div>
+                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-2xl mb-1.5'><FaCar /></span>
+                                <h4 className='text-sm font-semibold font-description'>Have parking</h4>
+                            </div>
+                            <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl w-28 h-24  flex flex-col items-center justify-center'>
+                                <span className='text-2xl mb-1.5'><MdPets /></span>
+                                <h4 className='text-sm font-semibold font-description'>Pets allow</h4>
+                            </div>
                         </div>
-                        <span className='text-xl border rounded-xl w-48 py-6 flex flex-col items-center'>
-                            <span className='text-4xl mb-1.5'><TbMassage /></span>
-                            <h4 className='text-sm font-semibold font-description'>Higher Quality </h4>
-                        </span>
-                        <span className='text-xl border rounded-xl w-48 py-6 flex flex-col items-center'>
-                            <span className='text-4xl mb-1.5'><FaCar /></span>
-                            <h4 className='text-sm font-semibold font-description'>Have parking</h4>
-                        </span>
-                        <span className='text-xl border rounded-xl w-48 py-6 flex flex-col items-center'>
-                            <span className='text-4xl mb-1.5'><MdPets /></span>
-                            <h4 className='text-sm font-semibold font-description'>Pets allow</h4>
-                        </span>
+                        <div>
+                            <div onClick={() => handleBooking(data)}>
+                                <div className='text-cyan-400 border-x border-dashed border-cyan-400 p-1.5 rounded-xl'>
+                                    <div className='text-xl text-cyan-400 border border-cyan-400 rounded-xl px-8  py-3 flex flex-col items-center'>
+                                        <span className='text-4xl mb-1.5'><IoBookmarksOutline /></span>
+                                        <h4 className='text-sm font-semibold font-description'>Bookmark</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <h4 className='text-3xl font-bold font-heading mb-3'>{estate_title}</h4>
@@ -103,6 +121,7 @@ const EstateDetails = () => {
                 </div>
                 <div className='w-1/4'>
                     <form className=' border p-6 rounded-xl'>
+                        <h2 className='text-center text-3xl font-semibold font-description'>Contact Us</h2>
                         <div>
                             <label htmlFor="name">
                                 <h6 className='font-heading font-semibold'>Name</h6>

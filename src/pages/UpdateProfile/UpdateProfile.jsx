@@ -27,6 +27,7 @@ const UpdateProfile = () => {
                 //solution 1
                 setReload(prevState => !prevState);
                 toast.success('Update Successfully');
+                document.getElementById('my_modal_1').showModal()
 
                 //solution 2
                 // setReload(false); 
