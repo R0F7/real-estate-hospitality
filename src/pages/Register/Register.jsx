@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaChevronRight } from "react-icons/fa";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from 'react-hot-toast';
 import { updateProfile } from "firebase/auth";
 import { auth } from "../../Firebase/firebase.confige";
+import { Helmet } from 'react-helmet-async';
 
 
 const Register = () => {
@@ -54,29 +54,36 @@ const Register = () => {
     }
 
     return (
-        <div className="lg:h-[calc(100vh-386px)] flex items-center">
-            <form onSubmit={handleSubmit(onSubmit)} className="border md:w-3/4 lg:w-[30%] mx-auto px-8 py-12  rounded-lg ">
+        <div className="lg:h-[calc(100vh-386px)] flex items-center my-16 md:my-0">
+            <Helmet>
+                <title>Hospitality Haven | Register</title>
+            </Helmet>
+            <form onSubmit={handleSubmit(onSubmit)} className="border w-[90%] bg-gradient-to-r from-[rgba(204,204,204,.55)] to-[rgba(230,230,230,.25)] md:w-3/4 lg:w-[30%] mx-auto px-8 py-12  rounded-lg ">
                 <div className="space-y-6">
                     <div>
-                        <input {...register("name", { required: true })} type="text" name="name" id="name" placeholder="Name" className="border-b-2 w-full outline-0 py-1.5" />
-                        {errors.name && <span>This field is required</span>}
+                        <input {...register("name", { required: true })} type="text" name="name" id="name" placeholder="Name" className="border-b-2  w-full outline-0 p-2" />
+                        {errors.name && <span className="text-red-400">This field is required</span>}
                     </div>
                     <div>
-                        <input {...register("email", { required: true })} type="email" name="email" id="email" placeholder="Email" className="border-b-2 w-full outline-0 py-1.5" />
-                        {errors.email && <span>This field is required</span>}
+                        <input {...register("email", { required: true })} type="email" name="email" id="email" placeholder="Email" className="border-b-2  w-full outline-0 p-2" />
+                        {errors.email && <span className="text-red-400">This field is required</span>}
                         <p className="text-red-400">{emailError}</p>
                     </div>
                     <div>
-                        <input {...register("photo")} type="text" name="photo" id="photo" placeholder="Photo URl" className="border-b-2 w-full outline-0 py-1.5" />
+                        <input {...register("photo", { required: true })} type="text" name="photo" id="photo" placeholder="Photo URl" className="border-b-2  w-full outline-0 p-2" />
+                        {errors.email && <span className="text-red-400">This field is required</span>}
                     </div>
                     <div className="relative">
-                        <input {...register("password", { required: true })} type={toggle ? 'text' : 'password'} name="password" id="password" placeholder="Password" className="border-b-2 w-full outline-0 py-1.5" />
-                        {errors.password && <span>This field is required</span>}
+                        <input {...register("password", { required: true })} type={toggle ? 'text' : 'password'} name="password" id="password" placeholder="Password" className="border-b-2  w-full outline-0 p-2" />
+                        {errors.password && <span className="text-red-400">This field is required</span>}
                         <span onClick={()=>setToggle(!toggle)} className="text-xl absolute right-2 top-2">{toggle ? <IoEyeOutline /> : <IoEyeOffOutline />}</span>
                     </div>
-                    <button className="text-lg font-bold shadow-2xl md:px-6 md:py-3 rounded-full border-b-4 border-l-4 border-gray-200 flex items-center lg:gap-8">REGISTER NOW <span><FaChevronRight /></span></button>
+                    <button href="#_" className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-cyan-400 rounded hover:bg-white group">
+                        <span className="w-48 h-48 rounded rotate-[-40deg] bg-purple-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                        <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white">Button Text</span>
+                    </button>
                 </div>
-                <p> have account Please<Link to='/login' className="underline text-blue-600 font-semibold"> Login</Link></p>
+                <p className="font-description font-semibold mt-4"> have account Please<Link to='/login' className="underline text-cyan-400 text-xl ml-2 font-bold"> Login</Link></p>
             </form>
         </div>
     );

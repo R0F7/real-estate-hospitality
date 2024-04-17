@@ -26,7 +26,7 @@ export default function Slider() {
         }}
         // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper rounded-xl"
+        className="mySwiper rounded-xl -z-10"
       >
         <SwiperSlide><img className='w-full h-[300px] md:h-[420px] lg:h-[630px] rounded-xl' src="../../public/image/Charming Coastal Cottage.jpg" alt="" /></SwiperSlide>
         <SwiperSlide><img className='w-full h-[300px] md:h-[420px] lg:h-[630px] rounded-xl' src="../../public/image/Historic Vineyard Guesthouse.jpg" alt="" /></SwiperSlide>
@@ -38,9 +38,5 @@ export default function Slider() {
     </>
   );
 }
-
-
-
-
 
 

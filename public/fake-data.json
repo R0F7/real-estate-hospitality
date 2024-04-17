@@ -4,12 +4,18 @@
         "segment_name": "Hotels",
         "estate_title": "Luxury Beachfront Hotel",
         "description": "Located on the pristine shores of Tropical Paradise Island, our Luxury Beachfront Hotel offers unparalleled elegance and comfort. With spacious accommodations and breathtaking ocean views, guests can immerse themselves in the ultimate beachfront experience. Enjoy world-class amenities such as an infinity pool, spa & wellness center, and fine dining restaurants. Each room boasts a private balcony overlooking the azure waters, providing the perfect backdrop for relaxation and rejuvenation.",
+        "short_description": "Elegance and comfort on Tropical Paradise Island with spacious accommodations, breathtaking ocean views, infinity pool, spa, and fine dining.",
         "price": "$500 per night",
         "status": "rent",
         "area": "5000 sq ft",
         "location": "Tropical Paradise Island",
         "facilities": ["Infinity Pool", "Spa & Wellness Center", "Fine Dining Restaurants", "Beach Access", "Concierge Service"],
         "image": "https://i.ibb.co/qNyptrD/Luxury-Beachfront-Hotel.jpg",
+        "image1": "https://i.ibb.co/Tkcf4Dt/Luxury3.jpg",
+        "image2": "https://i.ibb.co/1fq05yS/Luxury4.jpg",
+        "image3": "https://i.ibb.co/HhJ69gF/Luxury1.jpg",
+        "image4": "https://i.ibb.co/jwN1BsP/Luxury2.jpg",
+
         "rating": 4.8,
         "reviews": 120,
         "contact": {
@@ -23,12 +29,17 @@
         "segment_name": "Resorts",
         "estate_title": "Secluded Mountain Resort & Spa",
         "description": "Nestled amidst the Majestic Mountain Range, our Secluded Mountain Resort & Spa offers a serene escape from the hustle and bustle of city life. Retreat to private cabins surrounded by tranquil wilderness, where hiking trails and outdoor adventures await. Indulge in gourmet dining experiences and pampering spa treatments at our world-class spa & wellness center. With personalized concierge service and exclusive access to private hiking trails, guests can enjoy a truly unforgettable mountain retreat.",
+        "short_description": "Serenity amidst the Majestic Mountain Range with private cabins, hiking trails, gourmet dining, spa, and outdoor adventure guides.",
         "price": "$1200 per night",
         "status": "rent",
         "area": "8000 sq ft",
         "location": "Majestic Mountain Range",
         "facilities": ["Private Cabins", "Hiking Trails", "Gourmet Dining", "Spa & Wellness Center", "Outdoor Adventure Guides"],
         "image": "https://i.ibb.co/vzVVzZB/Secluded-Mountain-Resort-Spa.webp",
+        "image1":"https://i.ibb.co/syfLgDg/Secluded2.jpg",
+        "image2":"https://i.ibb.co/DQy3jGY/Secluded1.jpg",
+        "image3":"https://i.ibb.co/0V3N950/Secluded4.jpg",
+        "image4":"https://i.ibb.co/F42rLgX/Secluded3.jpg",  
         "rating": 4.9,
         "reviews": 98,
         "contact": {
@@ -42,12 +53,17 @@
         "segment_name": "Vacation Rentals",
         "estate_title": "Charming Coastal Cottage",
         "description": "Discover coastal living at its finest in our Charming Coastal Cottage, situated in a picturesque seaside village. This cozy retreat offers panoramic ocean views and easy access to sandy beaches. Relax on the private terrace or explore scenic coastal walks along the shoreline. The fully equipped kitchen allows for convenient meal preparation, while the inviting interior provides a comfortable and welcoming atmosphere for guests seeking a peaceful seaside getaway.",
+        "short_description": "Coastal living in a picturesque seaside village with panoramic ocean views, sandy beaches, outdoor terrace, and fully equipped kitchen.",
         "price": "$300 per night",
         "status": "rent",
         "area": "1500 sq ft",
         "location": "Seaside Village",
         "facilities": ["Private Beach Access", "Outdoor Terrace", "Fully Equipped Kitchen", "Scenic Coastal Walks"],
         "image": "https://i.ibb.co/1Qc2BXG/Charming-Coastal-Cottage.jpg",
+        "image1": "https://i.ibb.co/F6gm5RJ/Charming2.jpg",
+        "image2": "https://i.ibb.co/r41b01k/Charming1.jpg",
+        "image3": "https://i.ibb.co/zXHW6Q4/Charming4.jpg",
+        "image4": "https://i.ibb.co/q1g723r/Charming3.jpg",  
         "rating": 4.7,
         "reviews": 145,
         "contact": {
@@ -61,12 +77,17 @@
         "segment_name": "Lodges",
         "estate_title": "Rustic Wilderness Lodge",
         "description": "Immerse yourself in nature at our Rustic Wilderness Lodge, nestled within the pristine forests of Wilderness National Park. Experience the tranquility of lakeside living and the warmth of a crackling fireplace in our cozy lodge accommodations. Guided nature tours and outdoor activities await adventurers of all ages, while lakeside dining offers a taste of local cuisine amidst breathtaking natural surroundings. Escape the ordinary and embrace the rugged beauty of the wilderness at our rustic lodge retreat.",
+        "short_description": "Nature immersion in Wilderness National Park with lakeside living, cozy fireplace lounge, guided nature tours, and outdoor activities.",
         "price": "$250 per night",
         "status": "rent",
         "area": "3000 sq ft",
         "location": "Wilderness National Park",
         "facilities": ["Guided Nature Tours", "Lakeside Dining", "Outdoor Activities", "Cozy Fireplace Lounge"],
         "image": "https://i.ibb.co/GvNNSYR/Rustic-Wilderness-Lodge.jpg",
+        "image1": "https://i.ibb.co/n1437SX/Rustic3.jpg",
+        "image2": "https://i.ibb.co/hcbZcmX/Rustic2.jpg",
+        "image3": "https://i.ibb.co/tJ1gq45/Rustic1.jpg",  
+        "image4": "https://i.ibb.co/mGqFLqV/Rustic4.jpg",  
         "rating": 4.5,
         "reviews": 88,
         "contact": {
@@ -80,12 +101,17 @@
         "segment_name": "Guesthouses",
         "estate_title": "Historic Vineyard Guesthouse",
         "description": "Step back in time and experience the charm of our Historic Vineyard Guesthouse, located amidst rolling vineyards and lush countryside. This elegantly restored guesthouse offers a unique blend of historic charm and modern comforts. Explore vineyard tours and wine tastings, or simply relax in the garden and savor the tranquility of the countryside. With vineyard views and a dedicated wine tasting room, our guesthouse provides an unforgettable retreat for wine enthusiasts and history lovers alike.",
+        "short_description": "Charm of a Historic Vineyard Guesthouse amidst rolling vineyards with vineyard views, wine tasting room, garden breakfasts, and historic tours.",
         "price": "$180 per night",
         "status": "rent",
         "area": "2000 sq ft",
         "location": "Vineyard Countryside",
         "facilities": ["Vineyard Views", "Wine Tasting Room", "Garden Breakfasts", "Historic Tours"],
         "image": "https://i.ibb.co/7jHG0B1/Historic-Vineyard-Guesthouse.jpg",
+        "image1": "https://i.ibb.co/XFDy5MW/Historic2.jpg",
+        "image2": "https://i.ibb.co/X4DnKzk/Historic1.jpg",
+        "image3": "https://i.ibb.co/bN9wp2k/Historic4.jpg",
+        "image4": "https://i.ibb.co/GnFq3rs/Historic3.jpg",  
         "rating": 4.6,
         "reviews": 102,
         "contact": {
@@ -95,7 +121,4 @@
         "bg":"#19A7CE"
       }
     ]
-
-  
-  
   

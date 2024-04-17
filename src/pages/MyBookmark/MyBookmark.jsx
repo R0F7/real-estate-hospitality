@@ -3,6 +3,7 @@ import { getLocalStorageData, removeLocalStorageData } from "../../Utility/Utili
 import { useEffect } from "react";
 import BookingTemplate from "../../components/BookmarkTemplate";
 import EmptyState from "../../components/EmptyState/EmptyState";
+import { Helmet } from 'react-helmet-async';
 
 const MyBookings = () => {
     const [userData, setUserData] = useState([]);
@@ -20,12 +21,23 @@ const MyBookings = () => {
         setUserData(storeData)
     }
 
-    if (userData.length < 1) return <EmptyState message='No Bookmarks Available!' address={'/'} label={'Go To Home'}></EmptyState>
+    if (userData.length < 1) return (
+        <>
+            <Helmet>
+                <title>Hospitality Haven | Bookmark</title>
+            </Helmet>
+            
+            <EmptyState message='No Bookmarks Available!' address={'/'} label={'Go To Home'}></EmptyState>
+        </>
+    )
 
     return (
         <div>
+            <Helmet>
+                <title>Hospitality Haven | Bookmark</title>
+            </Helmet>
             {
-                userData.map(data => <BookingTemplate key={data.id} handleRemove = {handleRemove} data={data}></BookingTemplate>)
+                userData.map(data => <BookingTemplate key={data.id} handleRemove={handleRemove} data={data}></BookingTemplate>)
             }
         </div>
     );

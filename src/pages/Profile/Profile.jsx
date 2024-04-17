@@ -4,6 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FiTwitter } from "react-icons/fi";
 import { LuFacebook } from "react-icons/lu";
+import { Helmet } from 'react-helmet-async';
 
 const Profile = () => {
     const { user } = useContext(AuthContext);
@@ -11,6 +12,9 @@ const Profile = () => {
 
     return (
         <div className="lg:h-[calc(100vh-386px)] mb-10 lg:-mt-0 flex items-center ">
+             <Helmet>
+                <title>Hospitality Haven | Profile</title>
+            </Helmet>
             <div className="flex flex-col lg:flex-row shadow-2xl md:w-1/2 lg:h-[350px] rounded-lg lg:my-10 mx-auto bg-gradient-to-r from-[rgba(204,204,204,.55)] to-[rgba(230,230,230,.25)] ">
                 <div className="p-6 flex flex-col justify-center h-full lg:w-2/5 text-center">
 
@@ -19,7 +23,7 @@ const Profile = () => {
                     </div>
 
                     <h4 className="text-xl font-description font-bold text-[rgba(0,212,255,.8)] mb-1.5">{user ? user?.displayName : 'Unknown'}</h4>
-                    <h6 className="font-description text-xl font-bold text-cyan-400">UID: <span className="text-lg font-medium text-[#4b5563] font-description">{user && user?.uid}</span></h6>
+                    <h6 className="font-description text-xl font-bold text-cyan-400">UID: <span className="text-lg font-medium text-[rgba(128,128,128,.9)] font-description">{user && user?.uid}</span></h6>
                 </div>
                 <div className="h-full w-[1.50px] b-[rgba(0,0,0,.05)]  bg-gradient-to-t from-[rgba(0,26,36,0.28895308123249297)]  to-[rgba(0,212,255,1)] b-[rgba(34,211,238,0.3)]"></div>
                 <div className="p-6 lg:w-3/5 ">
