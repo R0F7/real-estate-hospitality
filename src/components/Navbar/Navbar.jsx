@@ -12,8 +12,12 @@ const Navbar = () => {
     const NavLinks = <>
         <li><NavLink to='/' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Home</NavLink></li>
         <li><NavLink to='/booking' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Bookmark</NavLink></li>
-        <li><NavLink to='/profile' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Profile</NavLink></li>
-        <li><NavLink to='/update-profile' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Update Profile</NavLink></li>
+        {
+            user && <li><NavLink to='/profile' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Profile</NavLink></li>
+        }
+        {
+            user && <li><NavLink to='/update-profile' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Update Profile</NavLink></li>
+        }
         <li><NavLink to='/contact' className={({ isActive }) => isActive ? 'border border-cyan-400 text-cyan-400 text-lg' : 'text-[rgba(19,19,19,0.80)] text-lg'}>Contact</NavLink></li>
     </>
 
@@ -42,10 +46,10 @@ const Navbar = () => {
                             <div className='w-12 h-12 rounded-full tooltip tooltip-secondary tooltip-bottom' data-tip={user?.displayName || 'Unknown'}>
                                 <img className='w-full h-full rounded-full' src={user?.photoURL || 'https://i.ibb.co/51kxBQ8/istockphoto-1327592506-612x612.jpg'} alt="" />
                             </div>
-                            <button onClick={handleLogOut} className="btn">Logout</button>
+                            <button onClick={handleLogOut} className="btn bg-cyan-400 text-white">Logout</button>
                         </div>
                         :
-                        <Link to='/login' className="btn">Login</Link>
+                        <Link to='/login' className="btn bg-cyan-400 text-white">Login</Link>
                 }
 
             </div>

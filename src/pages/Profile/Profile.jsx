@@ -5,13 +5,26 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FiTwitter } from "react-icons/fi";
 import { LuFacebook } from "react-icons/lu";
 import { Helmet } from 'react-helmet-async';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
+
 
 const Profile = () => {
     const { user } = useContext(AuthContext);
-    // console.log('profile',user);
+    
+    useEffect(() => {
+        AOS.init({
+          offset: 100, 
+          delay: 200, 
+          duration: 1000, 
+          easing: 'ease', 
+          once: false, 
+        });
+      }, []);
 
     return (
-        <div className="lg:h-[calc(100vh-386px)] mb-10 lg:-mt-0 flex items-center ">
+        <div className="lg:h-[calc(100vh-386px)] mb-10 lg:-mt-0 flex items-center " data-aos="flip-down">
              <Helmet>
                 <title>Hospitality Haven | Profile</title>
             </Helmet>

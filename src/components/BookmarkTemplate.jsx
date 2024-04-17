@@ -1,13 +1,26 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const BookingTemplate = ({ data, handleRemove }) => {
     const { id, segment_name, estate_title, status, image } = data;
-    console.log(data);
+
+    useEffect(() => {
+        AOS.init({
+            offset: 100,
+            delay: 200,
+            duration: 1000,
+            easing: 'ease',
+            once: false,
+        });
+    }, []);
 
     return (
         <div>
-            <div  className="p-5 mx-auto sm:p-10 md:p-16  text-gray-100 dark:text-gray-800 border shadow mb-5">
+            <div className="p-5 mx-auto sm:p-10 md:p-16  text-gray-100 dark:text-gray-800 border shadow mb-5" data-aos="zoom-out">
                 <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded border shadow-lg">
                     <img src={image} alt="" className="w-full h-60 sm:h-96 bg-gray-500 dark:bg-gray-500" />
                     <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-gray-900 dark:bg-gray-50 shadow">

@@ -29,7 +29,7 @@ const Register = () => {
             toast.error('password should be at least 6 character or longer');
             return;
         }else if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
-            toast.error('Must have an Uppercase and a Lowercase letter in the password');
+            toast.error('Must have an Uppercase and Lowercase letter in the password');
             return;
         }
 
@@ -58,7 +58,7 @@ const Register = () => {
             <Helmet>
                 <title>Hospitality Haven | Register</title>
             </Helmet>
-            <form onSubmit={handleSubmit(onSubmit)} className="border w-[90%] bg-gradient-to-r from-[rgba(204,204,204,.55)] to-[rgba(230,230,230,.25)] md:w-3/4 lg:w-[30%] mx-auto px-8 py-12  rounded-lg ">
+            <form onSubmit={handleSubmit(onSubmit)} className="border w-[90%] bg-gradient-to-r from-[rgba(204,204,204,.55)] to-[rgba(230,230,230,.25)] md:w-3/4 lg:w-[30%] mx-auto px-8 py-12 md:mb-10 lg:mb-0  rounded-lg">
                 <div className="space-y-6">
                     <div>
                         <input {...register("name", { required: true })} type="text" name="name" id="name" placeholder="Name" className="border-b-2  w-full outline-0 p-2" />

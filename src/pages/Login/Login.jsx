@@ -53,7 +53,7 @@ const Login = () => {
     }
 
     return (
-        <div className="lg:h-[calc(100vh-386px)] mb-8 md:mb-0 flex items-center">
+        <div className="lg:h-[calc(100vh-386px)] mb-8 lg:mb-0 flex items-center">
             <Helmet>
                 <title>Hospitality Haven | Login </title>
             </Helmet>
@@ -82,7 +82,7 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
-                <p className="font-description font-semibold mt-4 md:mt-0">Do not have account Please<Link to='/register' className="ml-2 underline text-cyan-400 text-xl font-semibold"> Register</Link></p>
+                <p className="font-description font-semibold mt-4">Do not have account Please<Link to='/register' className="ml-2 underline text-cyan-400 text-xl font-semibold"> Register</Link></p>
             </form>
         </div>
     );
