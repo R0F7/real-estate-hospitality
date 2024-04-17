@@ -6,10 +6,10 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
 import PrivetRoute from "./PrivetRoute";
-import NotFound from "../pages/NotFound/NotFound";
 import Profile from "../pages/Profile/Profile";
 import Contact from "../pages/Contact/Contact";
 import MyBookmark from "../pages/MyBookmark/MyBookmark";
+import NotFound from "../pages/NotFound/NotFound";
 
 const route = createBrowserRouter([
     {

@@ -1,8 +1,25 @@
-# React + Vite
+# Hospitality Haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Live site:
+- [Hospitality Haven](https://real-estate-hospitality.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+## Resources:
+
+- [fire base](https://firebase.google.com/)
+- [React Router Dom](https://reactrouter.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Daisy UI](https://daisyui.com/)
+- [Mamba UI - Components](https://mambaui.com/)
+- [React-Icons](https://react-icons.github.io/react-icons/search/#q=twi)
+- [React Hot Toast](https://react-hot-toast.com/)
+- [React Awesome Component](https://github.com/brillout/awesome-react-components)
+
+## challenges task
+
+- [React Leaflet](https://recharts.org/)
+- [Swiper slider](https://swiperjs.com/)
+- [React Hook form](https://react-hook-form.com/)
+- [AOS Package](https://michalsnik.github.io/aos/)
